@@ -1,0 +1,11 @@
+//= require angular
+//= require AngularDevise
+//= require angular-rails-templates
+//= require angular-ui-router
+//= require angular-ui-bootstrap
+//= require angular-bootstrap 
+//= require angular-ui-bootstrap-tpls
+//= require angular-ui-select
+//= require toaster
+//= require angular-animate
+//= require_tree .

@@ -1,0 +1,26 @@
+{
+  "name": "cookingrecipe",
+  "authors": [
+    "Donia Mroua <donia.mroua@gmail.com>"
+  ],
+  "description": "angular and rails application",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.6",
+    "AngularJS-Toaster": "angularjs-toaster#~0.4.16",
+    "AngularDevise": "angular-devise#~1.1.0"
+  }
+}

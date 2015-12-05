@@ -1,0 +1,62 @@
+ <div class="page-header">
+      <h1>Cooking Recipes</h1>
+ </div>
+ 
+ <!-- Row Contains buttons for adding new recipe and adding new ingredient and searching recipe by title + publication date +  Description -->
+ 
+ <div class="row">
+ 	<div class="col-sm-6 pull-left">
+ 		<!-- Trigger the modal with a button -->
+	 	<button type="button" class="btn btn-info" ng-click="OpenModalIngredient()">
+	    <span class="glyphicon glyphicon-plus"></span> New Ingredient
+	    </button>
+	    <button type="button" class="btn btn-info" ng-click="OpenModalRecipe()">
+	    <span class="glyphicon glyphicon-plus"></span> New Recipe
+	    </button>
+    </div>
+ 	<div class="col-sm-6 pull-right">
+ 	<div class="input-group col-sm-6 pull-left">
+	    <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="query[queryBy]">
+		   <div class="input-group-btn">
+		    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+	       </div>
+       </div>
+ 	<div class="col-sm-1"></div>
+ 	<div class="input-group col-sm-5 pull-right">
+	      <select ng-model="queryBy" class="form-control">
+                    <option value="$"></option>
+                    <option value="title">Title</option>
+                    <option value="description">Description</option>
+                    <option value="publication_date">Publication Date</option>
+           </select>  
+      </div>
+    </div>  
+</div>
+
+<!-- Display List of available Cooking recipes -->
+
+<div ng-repeat="recipe in listRecipe | orderBy:'-publication_date' | filter:query" class="row" style="border:1px outset lavenderblush;margin: 10px;">
+  <div class="col-sm-2">
+  	<img src="images/macaron.jpg" align="center"/>
+  </div>
+  <div class="col-sm-10" >
+  	 <div class="row">
+      <div class="col-sm-6 pull-left" ><h4><a ui-sref="home.recipe({ params:recipe.id })"> {{recipe.title}}</a></h4></div>
+      <div class="col-sm-6" > 
+          <uib-rating disable ng-model="recipe.rate" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+         <button  type="button" class="btn btn-default pull-right" ng-click="UpdateRate(recipe)"> <span class="label label-success">Update</span></button>
+      
+      </div>
+    </div>
+    <div class="row">
+      <div>{{recipe.description | cut:true:100:' ...'}}</div>
+    </div>
+     <div class="row">
+      <div class="col-sm-6 pull-right" >{{recipe.publication_date}} posted by <a ng-href="#/users/{{recipe.user.username}}">{{recipe.user.username}}</a></div>
+    </div>
+  </div>
+  <!-- <%= will_paginate @recipes %> -->
+</div>
+  
+   
+ <toaster-container></toaster-container>
