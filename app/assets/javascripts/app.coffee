@@ -13,17 +13,17 @@
   ($stateProvider, $urlRouterProvider) ->
     $stateProvider.state('home',
       url: '/home'
-      templateUrl: 'home/_home.html'
+      templateUrl: 'home/_home.haml'
       controller: 'MainCtrl')
       
       .state('home.recipe',
       url: '/home/recipe/:params'
-      templateUrl: 'recipe/_recipe.html'
+      templateUrl: 'recipe/_recipe.haml'
       controller: 'RecipesCtrl')
       
       .state('login',
       url: '/login'
-      templateUrl: 'auth/_login.html'
+      templateUrl: 'auth/_login.haml'
       controller: 'AuthCtrl'
       onEnter: [
         '$state'
@@ -37,7 +37,7 @@
       
       .state 'register',
       url: '/register'
-      templateUrl: 'auth/_register.html'
+      templateUrl: 'auth/_register.haml'
       controller: 'AuthCtrl'
       onEnter: [
         '$state'

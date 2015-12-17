@@ -1,0 +1,35 @@
+.modal-content
+  / Modal header
+  .modal-header
+    %button.close{"ng-click" => "cancel()", :type => "button"} &times;
+    %h2.modal-title Add new Recipe
+  / Modal body
+  .modal-body
+    %form.form-horizontal{:role => "form"}
+      .form-group
+        %label.control-label.col-sm-2 Recipe title:
+        .col-sm-6
+          %input.form-control{"ng-model" => "title", :placeholder => "Recipe title", :type => "text"}
+      .form-group
+        %label.control-label.col-sm-2 Ingredients:
+        .col-sm-6
+          %ui-select{:multiple => "", "ng-model" => "multiselect.ingredient", :theme => "bootstrap"}
+            %ui-select-match{:placeholder => "Select ingredients..."} {{$item.title}}
+            %ui-select-choices{:repeat => "ingredient in listIngredient| filter: $select.search"}
+              {{ingredient.title}}
+          / <select class="form-control" ng-model="ingredient" ng-options="i for i in ingredients"></select>
+      .form-group
+        %label.control-label.col-sm-2 Publication Date:
+        .col-sm-6
+          %input.form-control{"ng-model" => "publication_date", :placeholder => "date", :style => "margin-bottom: 10px;", :type => "text"}
+          %input{:datepicker => "", "ng-model" => "publication_date", :type => "text"}/
+      .form-group
+        %label.control-label.col-sm-2 Description:
+        .col-sm-6
+          %textarea.form-control{"ng-model" => "description", :rows => "5"}
+  / Modal footer
+  .modal-footer
+    %button.btn.btn-default{"ng-click" => "cancel()", :type => "button"} Close
+    %button.btn.btn-default{"ng-click" => "AddRecipe()", :type => "submit"}
+      %span.glyphicon.glyphicon-save>
+      Save

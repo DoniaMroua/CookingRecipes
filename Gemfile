@@ -14,6 +14,12 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#for html page
+gem 'haml-rails'
+#for javascripts file
+gem 'coffee-rails'
+
+
 gem 'responders'
 gem 'sprockets', '2.12.3'
 gem 'angular-rails-templates'
