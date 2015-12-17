@@ -1,0 +1,10 @@
+.page-header
+  %h1 Register
+%form{"ng-submit" => "register()"}
+  .input-group
+    %input.form-control{"ng-model" => "user.email", :placeholder => "Email", :type => "email"}
+  .input-group
+    %input.form-control{"ng-model" => "user.username", :placeholder => "Username", :type => "text"}
+  .input-group
+    %input.form-control{"ng-model" => "user.password", :placeholder => "Password", :type => "password"}
+  %input.btn.btn-default{:type => "submit", :value => "Register"}
