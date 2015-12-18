@@ -24,6 +24,7 @@
         %option{:value => "description"} Description
         %option{:value => "publication_date"} Publication Date
 / Display List of available Cooking recipes
+
 .row{"ng-repeat" => "recipe in listRecipe | orderBy:'-publication_date' | filter:query", :style => "border:1px outset lavenderblush;margin: 10px;"}
   .col-sm-2
     %img{:align => "center", :src => "images/macaron.jpg"}/
@@ -42,5 +43,7 @@
       .col-sm-6.pull-right
         {{recipe.publication_date}} posted by
         %a{"ng-href" => "#/users/{{recipe.user.username}}"} {{recipe.user.username}}
-  / <haml:loud> will_paginate @recipes </haml:loud>
+    
+
+= will_paginate @recipes
 %toaster-container

@@ -4,8 +4,7 @@ app.controller 'AuthCtrl', [
   'Auth'
   ($scope, $state, Auth) ->
   
-    #Registration and Login
-    
+ #Registration and Login
     $scope.login = ->
       Auth.login($scope.user).then ->
         $state.go 'home'
