@@ -42,5 +42,6 @@
       .col-sm-6.pull-right
         {{recipe.publication_date}} posted by
         %a{"ng-href" => "#/users/{{recipe.user.username}}"} {{recipe.user.username}}
-  / <haml:loud> will_paginate @recipes </haml:loud>
+ %div.clearfix
+  = will_paginate (@recipes)
 %toaster-container
