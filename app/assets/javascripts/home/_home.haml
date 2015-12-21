@@ -27,7 +27,7 @@
 
 .row{"ng-repeat" => "recipe in listRecipe | orderBy:'-publication_date' | filter:query", :style => "border:1px outset lavenderblush;margin: 10px;"}
   .col-sm-2
-    %img{:align => "center", :src => "images/macaron.jpg"}/
+    = image_tag "macaron.png"
   .col-sm-10
     .row
       .col-sm-6.pull-left
