@@ -1,4 +1,5 @@
 class IngredientsController < ApplicationController
+  before_filter :authenticate_user!, only: [:create]
   
   def create 
     ingredient = Ingredient.create(ingredient_params)
@@ -11,9 +12,9 @@ class IngredientsController < ApplicationController
   end
 
 
-  def show
-    respond_with Ingredient.find(params[:id])
-  end
+  #def show
+   # respond_with Ingredient.find(params[:id])
+  #end
 
   private
   def ingredient_params

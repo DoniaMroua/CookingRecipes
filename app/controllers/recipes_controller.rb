@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   
- # before_filter :authenticate_user!, only: [:create, :update]
+  before_filter :authenticate_user!, only: [:create, :update]
   
   
   def index
@@ -10,14 +10,14 @@ class RecipesController < ApplicationController
   end
 
   def create
-    #respond_with Recipe.create(recipe_params.merge(user_id: current_user.id))
-    respond_with Recipe.create(recipe_params)
+    respond_with Recipe.create(recipe_params.merge(user_id: current_user.id))
+    #respond_with Recipe.create(recipe_params)
     
   end
 
-  def show
-    respond_with Recipe.find(params[:id])
-  end
+  #def show
+   # respond_with Recipe.find(params[:id])
+  #end
 
  def update
     recipe= Recipe.find(params[:id])
