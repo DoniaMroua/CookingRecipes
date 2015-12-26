@@ -11,6 +11,10 @@
         .col-sm-6
           %input.form-control{"ng-model" => "title", :placeholder => "Recipe title", :type => "text"}
       .form-group
+        %label.control-label.col-sm-2 Recipe Image:
+        .col-sm-6
+          = form.file_field :image
+      .form-group
         %label.control-label.col-sm-2 Ingredients:
         .col-sm-6
           %ui-select{:multiple => "", "ng-model" => "multiselect.ingredient", :theme => "bootstrap"}
