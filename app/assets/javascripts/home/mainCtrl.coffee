@@ -1,9 +1,10 @@
 app.controller 'MainCtrl', [
   '$scope'
   'datacontext'
-  '$modal'
-  ($scope, datacontext, $modal) ->
-  
+  '$modal',
+  '$resource'
+  ($scope, datacontext, $modal,$resource) ->
+    
     #init Scope variable
     $scope.max = 5
     $scope.isReadonly = false
@@ -12,7 +13,17 @@ app.controller 'MainCtrl', [
     #Search By 
     $scope.query = {}
     $scope.queryBy = '$'
+        
+    ###*Globalisation*###
+  GetJsonResource = (language) ->
+    languageFilePath = 'Languages/' + language + '.json'
+    $resource(languageFilePath).get (data) ->
+      $scope.translation = data
+      return
+    return
     
+   GetJsonResource('en')
+ 
     #Rate, give note to recipe
     $scope.hoveringOver = (value) ->
       $scope.overStar = value
@@ -61,7 +72,7 @@ app.controller 'MainCtrl', [
 
             $scope.AddIngredient = ->
               if !$scope.titleIngredient or $scope.titleIngredient == ''
-                toaster.pop 'info', 'Validation', 'You need to enter ingredient name!'
+                toaster.pop 'info', 'Validation', $scope.translation.home.mainCtrl.Youneedtoenteringredientname+'!'
                 return
               else
                 datacontext.createIngredient title: $scope.titleIngredient
@@ -115,7 +126,7 @@ app.controller 'MainCtrl', [
 
             $scope.AddRecipe = ->
               if !$scope.title or $scope.title == '' or !$scope.description or $scope.description == '' or !$scope.publication_date or $scope.publication_date == ''
-                toaster.pop 'info', 'Validation', 'You need to enter all information'
+                toaster.pop 'info', 'Validation', $scope.translation.home.mainCtrl.Youneedtoenterallinformation
                 return
               else
                 datacontext.createRecipe

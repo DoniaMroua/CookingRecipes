@@ -1,0 +1,85 @@
+{
+    "ENGLISH": "English",
+    "FRENSH": "French",
+    "LANGUAGES": "Languages",
+
+    "pagination": "**********************************************************************pagination**********************************************************************",
+
+
+    "First": "First",
+    "Prev": "Prev",
+    "Next": "Next",
+    "Last": "Last",
+    "views": "**********************************************************************views**********************************************************************",
+    "auth": {
+        "_login": {
+            "Email": "Email",
+            "Password": "Password",
+            "LogIn" : "Log In"
+            },
+        "_register": {
+            "Email": "Email",
+            "Password": "Password",
+            "Register" : "Register",
+            "Username": "Username"
+            },
+        "authCtrl": ""
+    },
+    "home": {
+        "_home": {
+            "CookingRecipes": "Cooking Recipes",
+            "NewIngredient": "New Ingredient",
+            "NewRecipe" : "New Recipe",
+            "Search":"Search",
+            "Title":"Title",
+            "Description":"Description",
+            "PublicationDate":"Publication Date",
+            "postedby":"posted by"
+            },
+        "mainCtrl": {
+            "Youneedtoenteringredientname": "You need to enter ingredient name",
+            "Youneedtoenterallinformation": "You need to enter all nformation"
+            },
+        "ModalIngredient": {
+            "Addnewingredient":"Add new ingredient",
+            "IngredientName":"Ingredient Name",
+            "Enteringredientname":"Enter ingredient name",
+            "Close":"Close",
+            "Save":"Save"
+            },
+        "ModalRecipe": {
+            "Addnewrecipe":"Add new recipe",
+            "Recipetitle":"Recipe title",
+            "RecipeImage":"Recipe Image",
+            "Ingredients":"Ingredients",
+            "Selectingredients":"Select ingredients",
+            "PublicationDate":"Publication Date",
+            "Description":"Description",
+            "Close":"Close",
+            "Save":"Save"
+            }
+    },
+    "nav": {
+        "_nav": {
+            "Home": "Home",
+            "Register" : "Register",
+            "LogIn" : "Log In",
+            "LogOut" : "Log Out"
+            },
+        "navCtrl": ""
+    },
+    "recipe": {
+        "_recpes": "",
+        "recipeCtrl": ""
+    },
+    "app": "",
+    "datacontext":{
+        "Adding": "Adding ",
+        "successfully": "successfully",
+        "ErroronAdding": "Error on Adding",
+        "Updating": "Updating",
+        "Erroronupdating": "Error on updating"
+    },
+    "directive": "",
+    "filter": ""
+    }

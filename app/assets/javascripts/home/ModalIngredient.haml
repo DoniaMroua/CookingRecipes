@@ -2,16 +2,16 @@
   / Modal header
   .modal-header
     %button.close{"ng-click" => "cancel()", :type => "button"} &times;
-    %h4.modal-title Add new ingredient
+    %h4.modal-title {{ translation.home.ModalIngredient.Addnewingredient }}
   / Modal body
   .modal-body
     %form{:role => "form"}
       .form-group
-        %label Ingredient Name
-        %input.form-control{"ng-model" => "titleIngredient", :placeholder => "Enter ingredient name", :type => "text"}/
+        %label {{ translation.home.ModalIngredient.IngredientName }}
+        %input.form-control{"ng-model" => "titleIngredient", :placeholder => "{{ translation.home.ModalIngredient.Addnewingredient.Enteringredientname }}", :type => "text"}/
   / Modal footer
   .modal-footer
-    %button.btn.btn-default{"ng-click" => "cancel()", :type => "button"} Close
+    %button.btn.btn-default{"ng-click" => "cancel()", :type => "button"} {{ translation.home.ModalIngredient.Close }}
     %button.btn.btn-default{"ng-click" => "AddIngredient()", :type => "submit"}
       %span.glyphicon.glyphicon-save>
-      Save
+      {{ translation.home.ModalIngredient.Save }}

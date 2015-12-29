@@ -1,18 +1,18 @@
 .page-header
-  %h1 Cooking Recipes
+  %h1 {{ translation.home._home.CookingRecipes }}
 / Row Contains buttons for adding new recipe and adding new ingredient and searching recipe by title + publication date +  Description
 .row
   .col-sm-6.pull-left
     / Trigger the modal with a button
     %button.btn.btn-info{"ng-click" => "OpenModalIngredient()", :type => "button"}
       %span.glyphicon.glyphicon-plus
-      New Ingredient
+      {{ translation.home._home.NewIngredient }}
     %button.btn.btn-info{"ng-click" => "OpenModalRecipe()", :type => "button"}
       %span.glyphicon.glyphicon-plus
       New Recipe
   .col-sm-6.pull-right
     .input-group.col-sm-6.pull-left
-      %input#srch-term.form-control{:name => "srch-term", "ng-model" => "query[queryBy]", :placeholder => "Search", :type => "text"}
+      %input#srch-term.form-control{:name => "srch-term", "ng-model" => "query[queryBy]", :placeholder => "{{ translation.home._home.Search }}", :type => "text"}
         .input-group-btn
           %button.btn.btn-default{:type => "submit"}
             %i.glyphicon.glyphicon-search
@@ -20,9 +20,9 @@
     .input-group.col-sm-5.pull-right
       %select.form-control{"ng-model" => "queryBy"}
         %option{:value => "$"}
-        %option{:value => "title"} Title
-        %option{:value => "description"} Description
-        %option{:value => "publication_date"} Publication Date
+        %option{:value => "title"} {{ translation.home._home.Title }}
+        %option{:value => "description"} {{ translation.home._home.Description }}
+        %option{:value => "publication_date"} {{ translation.home._home.PublicationDate }}
 / Display List of available Cooking recipes
 .row{"ng-repeat" => "recipe in listRecipe | orderBy:'-publication_date' | filter:query", :style => "border:1px outset lavenderblush;margin: 10px;"}
   .col-sm-2
@@ -40,7 +40,7 @@
       %div {{recipe.description | cut:true:100:' ...'}}
     .row
       .col-sm-6.pull-right
-        {{recipe.publication_date}} posted by
+        {{recipe.publication_date}} {{ translation.home._home.postedby }}
         %a{"ng-href" => "#/users/{{recipe.user.username}}"} {{recipe.user.username}}
  %div.clearfix
   = will_paginate (@recipes)

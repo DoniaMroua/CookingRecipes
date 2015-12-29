@@ -1,0 +1,85 @@
+{
+    "ENGLISH": "Anglais",
+    "FRENSH": "Français",
+    "LANGUAGES": "Langues",
+
+    "pagination": "**********************************************************************pagination**********************************************************************",
+
+
+    "First": "Premier",
+    "Prev": "Avant",
+    "Next": "Après",
+    "Last": "Dernier",
+    "Javascripts": "**********************************************************************Javascripts**********************************************************************",
+    "auth": {
+        "_login": {
+            "Email": "Email",
+            "Password": "Mot de passe",
+            "LogIn" : "S'identifier"
+            },
+        "_register": {
+            "Email": "Email",
+            "Password": "Mot de passe",
+            "Register" : "Inscription",
+            "Username": "Le nom d'utilisateur"
+            },
+        "authCtrl": ""
+    },
+    "home": {
+        "_home": {
+            "CookingRecipes": "Recettes de cuisine",
+            "NewIngredient": "Nouveau Ingrédient",
+            "NewRecipe" : "Nouvelle recette",
+            "Search":"Recherche",
+            "Title":"Titre",
+            "Description":"Description",
+            "PublicationDate":"Date de Publication",
+              "postedby":"publié par"
+            },
+        "mainCtrl": {
+            "Youneedtoenteringredientname": "Vous devez entrer le nom d'ingrédient",
+            "Youneedtoenterallinformation": "Vous devez entrer tous les informations"
+            },
+        "ModalIngredient": {
+            "Addnewingredient":"Ajouter un nouveau ingrédient",
+            "IngredientName":"Nom de l'ingrédient",
+            "Enteringredientname":"Entrez le nom de l'ingrédient",
+            "Close":"Fermer",
+            "Save":"Sauvegarder"
+            },
+        "ModalRecipe": {
+            "Addnewrecipe":"Ajouter une nouvelle recette",
+            "Recipetitle":"Titre de la recette",
+            "RecipeImage":"Image de la recette",
+            "Ingredients":"Ingrédients",
+            "Selectingredients":"Sélectionnez les ingrédients",
+            "PublicationDate":"Date de Publication",
+            "Description":"Description",
+            "Close":"Fermer",
+            "Save":"Sauvegarder"
+            }
+    },
+    "nav": {
+        "_nav": {
+            "Home": "Accueil",
+            "Register" : "Inscription",
+            "LogIn" : "S'identifier",
+            "LogOut" : "Se déconnecter"
+            },
+        "navCtrl": ""
+    },
+    "recipe": {
+        "_recpes": "",
+        "recipeCtrl": ""
+    },
+    "app": "",
+    "datacontext":{
+        "Adding": "Ajout ",
+        "successfully": "avec succès",
+        "ErroronAdding": "Erreur d'Ajout",
+        "Updating": "Mise à jour",
+        "Erroronupdating": "Erreur de Mise à jour"
+    },
+    "directive": "",
+    "filter": ""
+    }
