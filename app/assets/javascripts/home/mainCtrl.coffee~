@@ -1,11 +1,13 @@
 app.controller 'MainCtrl', ($scope, datacontext, $modal,$resource) ->
   #init Scope variable
-
+<<<<<<< HEAD
   $scope.max = 36
   $scope.isReadonly = true
+=======
+  $scope.max = 5
+  $scope.isReadonly = false
   $scope.str="hello"
-
-
+>>>>>>> Commit_04
   #Search By
   $scope.query = {}
   $scope.queryBy = '$'
